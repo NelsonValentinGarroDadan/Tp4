@@ -15,18 +15,19 @@ import androidx.lifecycle.ViewModel;
 import java.util.Objects;
 
 public class HomeViewModel extends ViewModel {
-    private Context context;
+    //private Context context;
     private final MutableLiveData<String> mText;
-    private MutableLiveData<String> mTelefono;
+    //private MutableLiveData<String> mTelefono;
     public HomeViewModel(Application application) {
-        context = application.getApplicationContext();
+        //context = application.getApplicationContext();
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is llamar fragment");
     }
 
     public LiveData<String> getText() {
         return mText;
     }
+    /*
     public LiveData<String> getMutabe(){
         if(mTelefono == null){
             mTelefono = new MutableLiveData<>();
@@ -45,6 +46,6 @@ public class HomeViewModel extends ViewModel {
         Intent dial = new Intent(Intent.ACTION_DIAL, number);
         context.startActivity(dial);
     }
-
+    */
 
 }

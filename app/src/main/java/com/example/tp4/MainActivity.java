@@ -17,11 +17,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.M
-                && checkSelfPermission(Manifest.permission.CALL_PHONE)
+        /*if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.M
+                && checkSelfPermission(Manifest.permission.READ_CALL_LOG)
                 != PackageManager.PERMISSION_GRANTED){
-            requestPermissions(new String[]{Manifest.permission.CALL_PHONE},1000);
-        }
+            requestPermissions(new String[]{Manifest.permission.READ_CALL_LOG},1000);
+        }*/
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 

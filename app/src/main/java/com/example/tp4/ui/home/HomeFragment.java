@@ -24,9 +24,9 @@ public class HomeFragment extends Fragment {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
        /* homeViewModel.getMutabe().observe(this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
