@@ -27,7 +27,7 @@ public class HomeFragment extends Fragment {
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
-       /* homeViewModel.getMutabe().observe(this, new Observer<String>() {
+        homeViewModel.getMutabe().observe(this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
                 homeViewModel.Llamar(s);
@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 homeViewModel.EnviarTel(binding.etLlamar.getText().toString());
             }
-        });*/
+        });
         return root;
     }
 
