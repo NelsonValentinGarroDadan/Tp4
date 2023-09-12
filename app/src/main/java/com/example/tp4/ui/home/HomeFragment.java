@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.tp4.MainActivity;
 import com.example.tp4.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -27,7 +28,7 @@ public class HomeFragment extends Fragment {
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
-        homeViewModel.getMutabe().observe(this, new Observer<String>() {
+        homeViewModel.getMutabe().observe(HomeFragment.this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
                 homeViewModel.Llamar(s);
